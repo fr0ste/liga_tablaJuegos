@@ -1,10 +1,10 @@
 /*
- * Autor:Figueroa Martínez Joel Francisco
+ * Autor:Figueroa Martï¿½nez Joel Francisco
  * 
- * Fecha de creación: 02/05/2022
- * Fecha de modificación: 
+ * Fecha de creaciï¿½n: 02/05/2022
+ * Fecha de modificaciï¿½n: 
  * 
- * Descripción: 
+ * Descripciï¿½n: 
  * 
  * 
  */
@@ -13,11 +13,43 @@
 package model;
 
 
+import java.util.List;
+
 import pojo.Jugador;
 
 public class JugadorModelImpl implements IJugadorModel{
 
 	@Override
+	public void crearJugador(List<Jugador> lista, Jugador jugador) {
+		lista.add(jugador);
+	}
+
+	@Override
+	public void eliminarJugador(List<Jugador> lista, long idJugador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actualizarJugador(List<Jugador> lista, Jugador jugador) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}
+
+	/*@Override
 	public Jugador crearJugador() {
 		
 		
@@ -76,4 +108,4 @@ public class JugadorModelImpl implements IJugadorModel{
 	
 	*/
 	
-}
+//}

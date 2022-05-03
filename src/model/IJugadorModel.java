@@ -1,10 +1,10 @@
 /*
- * Autor:Figueroa Martínez Joel Francisco
+ * Autor:Figueroa Martï¿½nez Joel Francisco
  * 
- * Fecha de creación: 02/05/2022
- * Fecha de modificación: 
+ * Fecha de creaciï¿½n: 02/05/2022
+ * Fecha de modificaciï¿½n: 
  * 
- * Descripción: 
+ * Descripciï¿½n: 
  * 
  * 
  */
@@ -15,18 +15,17 @@
 package model;
 
 
+import java.util.List;
+
 import pojo.Jugador;
 
 public interface IJugadorModel {
 	// CRUD 5 metodos, crear, eliminar, actualizar, leer 1 registro, leer todos los registros
-	public Jugador crearJugador();
+	//public Jugador crearJugador();
 	
-	
-	/*
-	public List<Jugador> crearJugador(List<Jugador> lista, Jugador jugador);
-	public List<Jugador> eliminarJugador(List<Jugador> lista, long idJugador);
-	public List<Jugador> actualizarJugador(List<Jugador> lista, Jugador jugador);
+	public void crearJugador(List<Jugador> lista, Jugador jugador);
+	public void eliminarJugador(List<Jugador> lista, long idJugador);
+	public void actualizarJugador(List<Jugador> lista, Jugador jugador);
 	public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador);
 	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador);
-	*/
 }
