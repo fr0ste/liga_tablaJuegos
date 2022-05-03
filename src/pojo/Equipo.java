@@ -1,7 +1,31 @@
 package pojo;
 
+import java.util.Hashtable;
+
 public class Equipo {
-	// Llave primaria en la base de datos
-	private String nombre;
+	
+	private String nombre; //Llave primaria (id)
+	private Hashtable<Long, Jugador> jugadores;
+	//getters && setters
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Hashtable<Long, Jugador> getEquipo() {
+		return jugadores;
+	}
+
+	public void setJugador(Jugador jugador) {
+		
+		jugadores.put(jugador.getId(), jugador);
+		
+	}
+	
+	
 	
 }

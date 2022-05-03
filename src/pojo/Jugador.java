@@ -1,7 +1,20 @@
+/*
+ * Autor:Figueroa Martínez Joel Francisco 
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 
+ * 
+ * Descripción: 
+ * 
+ * 
+ */
+
+
+
 package pojo;
 
 public class Jugador extends Persona {
-	private long id;
+	private long id; //primary key
 	
 	public Jugador() {
 		
@@ -14,27 +27,4 @@ public class Jugador extends Persona {
 	public void setId(long id) {
 		this.id = id;
 	}
-	
-	//private String nombreequipo;
-	//private Short faltas;
-
-//	public String getNombreequipo() {
-//		return nombreequipo;
-//	}
-//
-//	public void setNombreequipo(String nombreequipo) {
-//		this.nombreequipo = nombreequipo;
-//	}
-
-//	public Short getFaltas() {
-//		return faltas;
-//	}
-//
-//	public void setFaltas(Short i) {
-//		this.faltas = i;
-//	}
-
-//	public void Datos() {
-//	}
-
 }

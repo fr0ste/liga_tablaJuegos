@@ -1,15 +1,36 @@
+/*
+ * Autor:Figueroa Martínez Joel Francisco
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 
+ * 
+ * Descripción: 
+ * 
+ * 
+ */
+
+
 package model;
 
-import java.util.List;
 
 import pojo.Jugador;
 
 public class JugadorModelImpl implements IJugadorModel{
 
 	@Override
-	public List<Jugador> crearJugador(List<Jugador> lista, Jugador jugador) {
-		lista.add(jugador);
-		return lista;
+	public Jugador crearJugador() {
+		
+		
+		
+		return null;
+	}
+
+	
+	/*
+	@Override
+	public Hashtable<int, Jugador> crearJugador(Hashtable<int, Jugador> jugadores, Jugador jugador) {
+		jugadores.put(jugador.getId(), jugador);
+		return jugadores;
 	}
 
 	@Override
@@ -52,5 +73,7 @@ public class JugadorModelImpl implements IJugadorModel{
 	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador) {
 		return lista;
 	}
+	
+	*/
 	
 }

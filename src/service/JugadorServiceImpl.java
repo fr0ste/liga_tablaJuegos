@@ -1,6 +1,16 @@
-package service;
+/*
+ * Autor:Figueroa Martínez Joel Francisco
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 
+ * 
+ * Descripción: 
+ * 
+ * 
+ */
 
-import java.util.List;
+
+package service;
 
 import model.IJugadorModel;
 import model.JugadorModelImpl;
@@ -8,10 +18,16 @@ import pojo.Jugador;
 
 public class JugadorServiceImpl  implements IJugadorService {
 	IJugadorModel model = new JugadorModelImpl();
-	@Override
-	public List<Jugador> crearJugador(List<Jugador> lista, Jugador jugador) {
-		return model.crearJugador(lista, jugador);
+	
+	
+	public Jugador crearJugador() {
+		
+		return model.crearJugador();
 	}
+	
+	/*
+	@Override
+	
 
 	@Override
 	public List<Jugador> eliminarJugador(List<Jugador> lista, long idJugador) {
@@ -32,5 +48,6 @@ public class JugadorServiceImpl  implements IJugadorService {
 	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador) {
 		return model.obtenerTodosJugador(lista, jugador);
 	}
+	*/
 
 }

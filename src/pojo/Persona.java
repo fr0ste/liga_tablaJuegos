@@ -1,3 +1,17 @@
+/*
+ * Autor:Figueroa Martínez Joel Francisco
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 
+ * 
+ * Descripción: 
+ * 
+ * 
+ */
+
+
+
+
 
 package pojo;
 
@@ -38,11 +52,6 @@ public abstract class Persona {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
-	}
-
-	public void tipo() {
-
-		System.out.println("Es una persona");
 	}
 
 }
