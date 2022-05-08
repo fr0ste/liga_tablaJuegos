@@ -10,14 +10,25 @@ public class Torneo {
 	
 	public Torneo() {
 	}
+	
+	
+
+	public Torneo(String nombreTorneo, String categoria) {
+		
+		this.nombreTorneo = nombreTorneo;
+		this.categoria = categoria;
+		equipos = new  Hashtable<String, Equipo>();
+	}
+
+
 
 	//getters && setters
 	public Hashtable<String, Equipo> getEquipos() {
 		return equipos;
 	}
 
-	public void setEquipos(Hashtable<String, Equipo> equipos) {
-		this.equipos = equipos;
+	public void setEquipos(Equipo equipo) {
+		this.equipos.put(equipo.getNombre(), equipo);
 	}
 
 	public String getNombreTorneo() {
@@ -34,40 +45,6 @@ public class Torneo {
 
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
-	}
-	
-		
-	
-	
-	
-//	public Hashtable<String, Equipo> getEquipos() {
-//		return equipos;
-//	}
-//
-//	public void setEquipo(Equipo equipo) {
-//		this.equipos.put(equipo.getNombre(), equipo);
-//	}
-//
-//	public String getNombreTorneo() {
-//		return nombreTorneo;
-//	}
-//
-//	public void setNombreTorneo(String nombreTorneo) {
-//		this.nombreTorneo = nombreTorneo;
-//	}
-//
-//	public String getCategoria() {
-//		return categoria;
-//	}
-//
-//	public void setCategoria(String categoria) {
-//		this.categoria = categoria;
-//	}
-//	
-//	
-//	
-//
-//	
-//	
+	}	
 
 }

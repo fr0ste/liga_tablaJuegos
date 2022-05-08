@@ -17,6 +17,9 @@ public class EquipoServiceImpl implements IEquipoService {
 	@Override
 	public Equipo crearEquipo() {
 		
+		final int maxJugadores =10;
+		final int minJugadores =5;
+		
 		Equipo equipo = new Equipo();
 		
 		int njugador=0;
@@ -26,24 +29,26 @@ public class EquipoServiceImpl implements IEquipoService {
 		System.out.println("ingrese el nombre del equipo");
 		String nombre = scan.nextLine();
 		equipo = model.crearEquipo(nombre);
-	
+		System.out.println("\n\n\n");
 		
 		
 		int opc=0;
+		
+		System.out.println("¡NECESITA AL MENOS 5 JUGADORES PARA CADA EQUIPO!");
+		
 		do {
-			
-			Jugador juga = jugadorService.crearJugador(String.valueOf(njugador));
-			equipo.setJugador(juga);
+			System.out.println("\t\t\t----JUGADOR " + (njugador+1) + "----");
+			Jugador jugador = jugadorService.crearJugador(String.valueOf(njugador));
+			equipo.setJugador(jugador);
 			
 			njugador++;
 			
-			if(njugador>=2) {
-				System.out.println("¿desea continuar? 1: si/2: no");
+			if(njugador>=minJugadores) {
+				System.out.println("¿desea seguir agregando jugadores? 1: si / 2: no");
 				opc = scan.nextInt();  
 			}
 			
-		}while(njugador<10 && opc!=2);
-		
+		}while(njugador<maxJugadores && opc!=2);
 		
 		
 		return equipo;
@@ -78,19 +83,6 @@ public class EquipoServiceImpl implements IEquipoService {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
-	public static void main(String[] args) {
-		
-		IEquipoService EService = new EquipoServiceImpl();
-		
-		Equipo e = EService.crearEquipo();
-		
-		
-		System.out.println(e.getNombre());
-		
-	}
-	
 	
 
 }
