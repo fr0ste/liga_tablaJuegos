@@ -9,7 +9,12 @@ public class Equipo {
 	private Hashtable<String, Jugador> jugadores;
 	
 	public Equipo() {
-
+		jugadores = new Hashtable<String, Jugador>();
+	}
+	
+	public Equipo(String nombre) {
+		this.setNombre(nombre);
+		jugadores = new Hashtable<String, Jugador>();
 	}
 
 	public String getNombre() {

@@ -22,7 +22,7 @@ import pojo.Jugador;
 public interface IJugadorService {
 	
 	public void crearJugador(Hashtable<String, Jugador> lista, Jugador jugador);
-	public Jugador crearJugador();
+	public Jugador crearJugador(String id);
 	public void eliminarJugador(Hashtable<String, Jugador> lista, String idJugador);
 	public void actualizarJugador(Hashtable<String, Jugador> lista, Jugador jugador);
 	public Jugador obtenerUnJugador(Hashtable<String, Jugador> lista, String idJugador);

@@ -31,11 +31,11 @@ public class JugadorServiceImpl  implements IJugadorService {
 	}
 
 	@Override
-	public Jugador crearJugador() {
-		Scanner scan = new Scanner(System.in);
-			System.out.println("ingrese el id");
-			String id = scan.nextLine();
-			System.out.println("ingrese el nombre");
+	public Jugador crearJugador(String id) {
+		
+			Scanner scan = new Scanner(System.in);
+			
+			System.out.println("ingrese el nombre del jugador");
 			String nombre = scan.nextLine();
 			System.out.println("ingrese la edad");
 			int edad= scan.nextInt();
@@ -45,7 +45,7 @@ public class JugadorServiceImpl  implements IJugadorService {
 			System.out.println("ingrese el telefono");
 			String telefono = scan.next();
 			scan.nextLine();
-			
+		
 			
 			
 			return model.crearJugador(id, nombre, edad, direccion, telefono);

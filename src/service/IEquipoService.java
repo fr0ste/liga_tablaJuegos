@@ -1,18 +1,22 @@
 package service;
 
+import java.util.Hashtable;
 import java.util.List;
 
 import pojo.Equipo;
 import pojo.Jugador;
 
 public interface IEquipoService {
-	public void crearEquipo(List<Equipo> lista, Equipo equipo);
+	
+	public Equipo crearEquipo();
+	
+	public void guardarEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
 
-	public void eliminarEquipo(List<Equipo> lista, long idEquipo);
+	public void eliminarEquipo(Hashtable<String, Equipo> lista, String idEquipo);
 
-	public void actualizarEquipo(List<Equipo> lista, Equipo equipo);
+	public void actualizarEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
 
-	public Jugador obtenerUnEquipo(List<Equipo> lista, long idEquipo);
+	public Jugador obtenerUnEquipo(Hashtable<String, Equipo> lista, String idEquipo);
 
-	public List<Jugador> obtenerTodosEquipo(List<Equipo> lista, Equipo equipo);
+	public List<Jugador> obtenerTodosEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
 }

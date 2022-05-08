@@ -10,7 +10,9 @@ public interface IEquipoModel {
 	// CRUD 5 metodos, crear, eliminar, actualizar, leer 1 registro, leer todos los
 	// registros
 	// public Jugador crearJugador();
-
+	
+	public Equipo crearEquipo(String nombre);
+	
 	public void guardarEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
 
 	public void eliminarEquipo(Hashtable<String, Equipo> lista, String idEquipo);

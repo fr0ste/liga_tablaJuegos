@@ -37,4 +37,10 @@ public class EquipoModelImpl implements IEquipoModel{
 		return null;
 	}
 
+	@Override
+	public Equipo crearEquipo(String nombre) {
+		
+		return new Equipo(nombre);
+	}
+
 }
