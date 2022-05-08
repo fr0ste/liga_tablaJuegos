@@ -15,16 +15,20 @@
 
 package service;
 
-import java.util.List;
+import java.util.Hashtable;
 
 import pojo.Jugador;
 
 public interface IJugadorService {
-	public void crearJugador(List<Jugador> lista, Jugador jugador);
-	public void eliminarJugador(List<Jugador> lista, long idJugador);
-	public void actualizarJugador(List<Jugador> lista, Jugador jugador);
-	public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador);
-	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador);
+	
+	public void crearJugador(Hashtable<String, Jugador> lista, Jugador jugador);
+	public Jugador crearJugador();
+	public void eliminarJugador(Hashtable<String, Jugador> lista, String idJugador);
+	public void actualizarJugador(Hashtable<String, Jugador> lista, Jugador jugador);
+	public Jugador obtenerUnJugador(Hashtable<String, Jugador> lista, String idJugador);
+	public Hashtable<String, Jugador> obtenerTodosJugador(Hashtable<String, Jugador> lista, Jugador jugador);
+	
+	
 }
 	
 	//public Jugador crearJugador();
@@ -32,9 +36,9 @@ public interface IJugadorService {
 	/*
 	// CRUD 5 metodos, crear, eliminar, actualizar, leer 1 registro, leer todos los registros
 		
-		public List<Jugador> eliminarJugador(List<Jugador> lista, long idJugador);
+		public List<Jugador> eliminarJugador(List<Jugador> lista, String idJugador);
 		public List<Jugador> actualizarJugador(List<Jugador> lista, Jugador jugador);
-		public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador);
+		public Jugador obtenerUnJugador(List<Jugador> lista, String idJugador);
 		public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador);
 		*/
 //}

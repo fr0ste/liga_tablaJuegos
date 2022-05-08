@@ -12,7 +12,8 @@
 
 package service;
 
-import java.util.List;
+import java.util.Hashtable;
+import java.util.Scanner;
 
 import model.IJugadorModel;
 import model.JugadorModelImpl;
@@ -22,64 +23,63 @@ public class JugadorServiceImpl  implements IJugadorService {
 	IJugadorModel model = new JugadorModelImpl();
 
 	@Override
-	public void crearJugador(List<Jugador> lista, Jugador jugador) {
+	public void crearJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
+		
 		model.crearJugador(lista, jugador);
 		
-	}
-
-	@Override
-	public void eliminarJugador(List<Jugador> lista, long idJugador) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void actualizarJugador(List<Jugador> lista, Jugador jugador) {
-		// TODO Auto-generated method stub
+	public Jugador crearJugador() {
+		Scanner scan = new Scanner(System.in);
+			System.out.println("ingrese el id");
+			String id = scan.nextLine();
+			System.out.println("ingrese el nombre");
+			String nombre = scan.nextLine();
+			System.out.println("ingrese la edad");
+			int edad= scan.nextInt();
+			scan.nextLine();
+			System.out.println("ingrese la direccion");
+			String direccion = scan.next();
+			System.out.println("ingrese el telefono");
+			String telefono = scan.next();
+			scan.nextLine();
+			
+			
+			
+			return model.crearJugador(id, nombre, edad, direccion, telefono);
+		
 		
 	}
 
 	@Override
-	public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador) {
-		// TODO Auto-generated method stub
-		return null;
+	public void eliminarJugador(Hashtable<String, Jugador> lista, String idJugador) {
+		lista.remove(idJugador);
+		
 	}
 
 	@Override
-	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador) {
-		// TODO Auto-generated method stub
-		return null;
+	public void actualizarJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
+		lista.replace(jugador.getId(), jugador);
+		
 	}
+
+	@Override
+	public Jugador obtenerUnJugador(Hashtable<String, Jugador> lista, String idJugador) {
+		
+		return lista.get(idJugador);
+	}
+
+	@Override
+	public Hashtable<String, Jugador> obtenerTodosJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
+		return lista;
+	}
+	
+		
+		
+		
+	
+	
 	
 }
-	/*public Jugador crearJugador() {
-		
-		return model.crearJugador();
-	}
-	
-	/*
-	@Override
-	
-
-	@Override
-	public List<Jugador> eliminarJugador(List<Jugador> lista, long idJugador) {
-		return model.eliminarJugador(lista, idJugador);
-	}
-
-	@Override
-	public List<Jugador> actualizarJugador(List<Jugador> lista, Jugador jugador) {
-		return model.actualizarJugador(lista, jugador);
-	}
-
-	@Override
-	public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador) {
-		return model.obtenerUnJugador(lista, idJugador);
-	}
-
-	@Override
-	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador) {
-		return model.obtenerTodosJugador(lista, jugador);
-	}
-	*/
-
-//}

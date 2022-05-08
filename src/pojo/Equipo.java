@@ -1,12 +1,12 @@
 package pojo;
 
-//import java.util.Hashtable;
-import java.util.List;
+import java.util.Hashtable;
+
 
 public class Equipo {
 
 	private String nombre; //Llave primaria (id)
-	private List<Jugador> jugadores;
+	private Hashtable<String, Jugador> jugadores;
 	
 	public Equipo() {
 
@@ -20,32 +20,12 @@ public class Equipo {
 		this.nombre = nombre;
 	}
 
-	public List<Jugador> getJugadores() {
+	public Hashtable<String, Jugador> getJugadores() {
 		return jugadores;
 	}
 
-	public void setJugadores(List<Jugador> jugadores) {
-		this.jugadores = jugadores;
+	public void setJugador(Jugador jugador) {
+		jugadores.put(jugador.getId(), jugador);
 	}
-		
-	//getters && setters
-	
-//	public String getNombre() {
-//		return nombre;
-//	}
-//
-//	public void setNombre(String nombre) {
-//		this.nombre = nombre;
-//	}
-//
-//	public Hashtable<Long, Jugador> getEquipo() {
-//		return jugadores;
-//	}
-//
-//	public void setJugador(Jugador jugador) {
-//		
-//		jugadores.put(jugador.getId(), jugador);
-//		
-//	}
 	
 }

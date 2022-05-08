@@ -13,39 +13,48 @@
 package model;
 
 
-import java.util.List;
-
+import java.util.Hashtable;
 import pojo.Jugador;
 
 public class JugadorModelImpl implements IJugadorModel{
 
 	@Override
-	public void crearJugador(List<Jugador> lista, Jugador jugador) {
-		lista.add(jugador);
+	public void crearJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
+		lista.put(jugador.getId(), jugador);
 	}
 
 	@Override
-	public void eliminarJugador(List<Jugador> lista, long idJugador) {
+	public void eliminarJugador(Hashtable<String, Jugador> lista, String idJugador) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void actualizarJugador(List<Jugador> lista, Jugador jugador) {
+	public void actualizarJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador) {
+	public Jugador obtenerUnJugador(Hashtable<String, Jugador> lista, String idJugador) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Jugador> obtenerTodosJugador(List<Jugador> lista, Jugador jugador) {
+	public Hashtable<String, Jugador> obtenerTodosJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Jugador crearJugador(String id, String nombre, int edad, String direccion, String telefono) {
+		
+		
+		
+		return new Jugador(id,nombre,edad,direccion,telefono);
+	
+		
 	}
 }
 
@@ -66,7 +75,7 @@ public class JugadorModelImpl implements IJugadorModel{
 	}
 
 	@Override
-	public List<Jugador> eliminarJugador(List<Jugador> lista, long idJugador) {
+	public List<Jugador> eliminarJugador(List<Jugador> lista, String idJugador) {
 		int i = 0;
 		for (Jugador jugador : lista) {
 			if(jugador.getId() == idJugador) {
@@ -92,7 +101,7 @@ public class JugadorModelImpl implements IJugadorModel{
 	}
 
 	@Override
-	public Jugador obtenerUnJugador(List<Jugador> lista, long idJugador) {
+	public Jugador obtenerUnJugador(List<Jugador> lista, String idJugador) {
 		for (Jugador jugador : lista) {
 			if(jugador.getId() == idJugador) {
 				return jugador;
