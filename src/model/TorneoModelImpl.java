@@ -1,3 +1,14 @@
+/* Autor:Figueroa Martínez Joel Francisco
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
+ * 
+ * Descripción: implementacion del modelo de torneo 
+ * 
+ * 
+ */
+
+
 package model;
 
 import java.util.Hashtable; 
@@ -5,7 +16,7 @@ import java.util.Hashtable;
 import pojo.Equipo;
 import pojo.Jugador;
 import pojo.Torneo;
-import pojo.Grafica;
+
 
 public class TorneoModelImpl implements ITorneoModel{
 

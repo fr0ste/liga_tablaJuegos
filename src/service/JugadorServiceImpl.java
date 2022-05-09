@@ -1,14 +1,12 @@
-/*
- * Autor:Figueroa Martï¿½nez Joel Francisco
+/* Autor:Figueroa Martínez Joel Francisco
  * 
- * Fecha de creaciï¿½n: 02/05/2022
- * Fecha de modificaciï¿½n: 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
  * 
- * Descripciï¿½n: 
+ * Descripción: clase con todos los servicios disponibles para un jugador  
  * 
  * 
  */
-
 
 package service;
 

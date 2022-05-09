@@ -1,3 +1,14 @@
+/* Autor:Figueroa Martínez Joel Francisco
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
+ * 
+ * Descripción: clase de tipo Equipo 
+ * 
+ * 
+ */
+
+
 package pojo;
 
 import java.util.Hashtable;

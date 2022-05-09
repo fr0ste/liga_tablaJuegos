@@ -1,19 +1,20 @@
-/*
- * Autor:Figueroa Martï¿½nez Joel Francisco   
+/* Autor:Figueroa Martínez Joel Francisco
  * 
- * Fecha de creaciï¿½n: 02/05/2022
- * Fecha de modificaciï¿½n: 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
  * 
- * Descripciï¿½n: 
- * 
+ * Descripción:
  * 	El programa cuenta con estas opciones:
- *		1.- Dar de alta a un equipo
- *		2.- Crear lista de arbitros
+ *		1.- crear torneos donde es necesario un minimo de 
+ *			dos equipos, en la cual cada equipo necisita un minimo
+ *			de 5 jugadores y un maximo de 10.
+ *			El maximo de equipos es 5.
+ *		2.- Dar de alta a un equipo
  *		3.- Ver tabla de juegos
- *		4.- Buscar equipo
- *		5.- Actualizar jugador
- *		6.- Eliminar un equipo
+ *		4.- listar todos los equipos
+ *			con sus respectivos jugadores.
  *		
+ *  
  * 
  * 
  */

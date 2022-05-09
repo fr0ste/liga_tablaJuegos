@@ -6,6 +6,16 @@ import java.util.Hashtable;
 public class Torneo {
 	private Hashtable<String, Equipo> equipos;
 	private String nombreTorneo;
+	/* Autor:Figueroa Martínez Joel Francisco
+	 * 
+	 * Fecha de creación: 02/05/2022
+	 * Fecha de modificación: 09/05/2022
+	 * 
+	 * Descripción: clase pojo de torneo 
+	 * 
+	 * 
+	 */
+	
 	private String categoria;
 	
 	public Torneo() {

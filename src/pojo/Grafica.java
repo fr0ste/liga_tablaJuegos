@@ -1,3 +1,13 @@
+/* Autor:Figueroa Martínez Joel Francisco
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
+ * 
+ * Descripción: clase para las gráficas del torneo 
+ * 
+ * 
+ */
+
 package pojo;
 
 public final class Grafica {

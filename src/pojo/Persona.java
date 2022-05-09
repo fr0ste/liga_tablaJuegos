@@ -1,10 +1,9 @@
-/*
- * Autor:Figueroa Martínez Joel Francisco
+/* Autor:Figueroa Martínez Joel Francisco
  * 
  * Fecha de creación: 02/05/2022
- * Fecha de modificación: 
+ * Fecha de modificación: 09/05/2022
  * 
- * Descripción: 
+ * Descripción: clase pojo de persona 
  * 
  * 
  */

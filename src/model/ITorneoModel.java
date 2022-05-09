@@ -1,3 +1,14 @@
+/* Autor:Figueroa Martínez Joel Francisco
+ * 
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
+ * 
+ * Descripción: interface del modelo del torneo  
+ * 
+ * 
+ */
+
+
 package model;
 
 import java.util.Hashtable;
