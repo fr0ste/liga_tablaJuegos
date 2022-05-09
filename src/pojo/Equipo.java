@@ -5,16 +5,20 @@ import java.util.Hashtable;
 
 public class Equipo {
 
-	private String nombre; //Llave primaria (id)
+	private String id;
+	private String nombre;
 	private Hashtable<String, Jugador> jugadores;
 	
 	public Equipo() {
 		jugadores = new Hashtable<String, Jugador>();
 	}
 	
-	public Equipo(String nombre) {
+	public Equipo(String nombre, String id) {
+		
 		this.setNombre(nombre);
+		this.setId(id);
 		jugadores = new Hashtable<String, Jugador>();
+		
 	}
 
 	public String getNombre() {
@@ -31,6 +35,14 @@ public class Equipo {
 
 	public void setJugador(Jugador jugador) {
 		jugadores.put(jugador.getId(), jugador);
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 }

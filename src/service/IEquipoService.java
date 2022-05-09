@@ -8,7 +8,7 @@ import pojo.Jugador;
 
 public interface IEquipoService {
 	
-	public Equipo crearEquipo();
+	public Equipo crearEquipo(String id);
 	
 	public void guardarEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
 

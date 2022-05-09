@@ -28,7 +28,7 @@ public class Torneo {
 	}
 
 	public void setEquipos(Equipo equipo) {
-		this.equipos.put(equipo.getNombre(), equipo);
+		this.equipos.put(equipo.getId(), equipo);
 	}
 
 	public String getNombreTorneo() {

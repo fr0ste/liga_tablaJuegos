@@ -9,7 +9,7 @@ public interface IEquipoModel {
 	// registros
 	// public Jugador crearJugador();
 	
-	public Equipo crearEquipo(String nombre);
+	public Equipo crearEquipo(String nombre, String id);
 	
 
 

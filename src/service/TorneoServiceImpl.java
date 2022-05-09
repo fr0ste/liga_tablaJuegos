@@ -31,19 +31,21 @@ public class TorneoServiceImpl implements ITorneoService{
 		
 		Torneo nTorneo = torneo.crearTorneo(nombre, categoria);
 		
-		System.out.println("¡NECESITA AL MENOS 2 EQUIPOS PARA GENERAR EL TORNEO!");
+		System.out.println("ï¿½NECESITA AL MENOS 2 EQUIPOS PARA GENERAR EL TORNEO!");
 		
 		System.out.println("\n +Ingrese los datos del los equipos");
 		do {
 			
 			System.out.println("\n\t\t----Equipo " +(i+1) +"----");
-			nTorneo.setEquipos(EquipoService.crearEquipo());
+			nTorneo.setEquipos(EquipoService.crearEquipo(String.valueOf(i+1)));
 			i++;
 			
 			if(i>=minEquipos) {
-				System.out.println("¿desea continuar agregando equipos? 1: si / 2: no");
+				System.out.println("ï¿½desea continuar agregando equipos? 1: si / 2: no");
 				opc = scan.nextInt();  
 			}
+			
+			
 			
 		}while(i<maxEquipos && opc!=2);
 		
@@ -87,7 +89,11 @@ public class TorneoServiceImpl implements ITorneoService{
         Iterator<String> itr = setOfKeys.iterator();
         String a = itr.next();
         
-       int n = (int)(Integer.parseInt(a)-1);
+       System.out.println("a----" + a);
+        
+       int n = (int)(Integer.parseInt(a)-2);
+       
+       System.out.println(n);
         
 		
 	return Grafica.getGrafica(n);
