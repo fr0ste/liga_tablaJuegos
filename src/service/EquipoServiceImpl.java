@@ -22,7 +22,7 @@ public class EquipoServiceImpl implements IEquipoService {
 		
 		Equipo equipo = new Equipo();
 		
-		int njugador=0;
+		int njugador=1;
 		Scanner scan = new Scanner(System.in);
 		
 		
@@ -45,7 +45,7 @@ public class EquipoServiceImpl implements IEquipoService {
 			
 			njugador++;
 			
-			if(njugador>=minJugadores) {
+			if(njugador>=minJugadores && njugador<maxJugadores) {
 				System.out.println("¿desea seguir agregando jugadores? 1: si / 2: no");
 				opc = scan.nextInt();  
 			}

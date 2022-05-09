@@ -19,4 +19,6 @@ public interface IEquipoService {
 	public Jugador obtenerUnEquipo(Hashtable<String, Equipo> lista, String idEquipo);
 
 	public List<Jugador> obtenerTodosEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
+	
+	
 }

@@ -20,7 +20,7 @@ public class Torneo {
 		equipos = new  Hashtable<String, Equipo>();
 	}
 
-
+	
 
 	//getters && setters
 	public Hashtable<String, Equipo> getEquipos() {

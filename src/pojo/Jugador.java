@@ -4,31 +4,28 @@
  * Fecha de creación: 02/05/2022
  * Fecha de modificación: 
  * 
- * Descripción: 
+ * Descripción: pojo de jugador 
  * 
  * 
  */
 
-
-
 package pojo;
 
 public class Jugador extends Persona {
-	private String id; //primary key
-	
+	private String id; // primary key
+
 	public Jugador() {
-		
+
 	}
-	
+
 	public Jugador(String id, String nombre, int edad, String direccion, String telefono) {
-		
-		this.id=id;
+
+		this.id = id;
 		this.setDireccion(direccion);
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setTelefono(telefono);
-		
-		
+
 	}
 
 	public String getId() {
@@ -41,12 +38,10 @@ public class Jugador extends Persona {
 
 	@Override
 	public String toString() {
-		return "Jugador [id=" + id + ", getNombre()=" + getNombre() + ", getEdad()=" + getEdad() + ", getDireccion()="
-				+ getDireccion() + ", getTelefono()=" + getTelefono() + "]";
+
+		return "\t\t\tJugador " + id + "\nNombre del jugador: " + getNombre() + "\nEdad: " + getEdad() + "\nDireccion: "
+				+ getDireccion() + "\nTelefono: " + getTelefono() + "\n\n";
+
 	}
-	
-	
-	
-	
-	
+
 }

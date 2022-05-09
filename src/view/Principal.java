@@ -58,24 +58,27 @@ public class Principal {
 
 					System.out.println("\t\t¿DESEA?...");
 					System.out.println("1.- agregar un equipo");
-					System.out.println("2.- eliminar torneo");
+					System.out.println("2.- listar todos los equipos del torneo");
 					System.out.println("3.- regresar");
 					opc2 = scan.nextInt();
 
 					switch (opc2) {
 
 					case 1:
-
+						
 						torneoService.agregarEquipo(torneo);
+						
 						break;
 
 					case 2:
-
+						
+						MostrarEquipo.listarEquipos(torneo);
 						
 						break;
 
 					case 3:
 						salir2 = true;
+						
 						break;
 
 					default:
