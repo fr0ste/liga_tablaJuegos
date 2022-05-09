@@ -1,10 +1,11 @@
 package model;
 
-import java.util.Hashtable;
+import java.util.Hashtable; 
 
 import pojo.Equipo;
 import pojo.Jugador;
 import pojo.Torneo;
+import pojo.Grafica;
 
 public class TorneoModelImpl implements ITorneoModel{
 

@@ -2,11 +2,14 @@
 package service;
 
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Set;
 
 import model.ITorneoModel;
 import model.TorneoModelImpl;
 import pojo.Equipo;
+import pojo.Grafica;
 import pojo.Torneo;
 
 public class TorneoServiceImpl implements ITorneoService{
@@ -70,5 +73,27 @@ public class TorneoServiceImpl implements ITorneoService{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public String Grafica(Torneo torneo) {
+		
+		
+		// Getting keySets of Hashtable and
+        // storing it into Set
+        Set<String> setOfKeys = torneo.getEquipos().keySet();
+ 
+        // Creating an Iterator object to
+        // iterate over the given Hashtable
+        Iterator<String> itr = setOfKeys.iterator();
+        String a = itr.next();
+        
+       int n = (int)(Integer.parseInt(a)-1);
+        
+		
+	return Grafica.getGrafica(n);
+		
+	}
+	
+	
 	
 }

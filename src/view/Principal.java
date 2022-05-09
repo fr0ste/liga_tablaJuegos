@@ -77,6 +77,8 @@ public static void main(String[] args) {
 						break;
 
 					case 2:
+						
+						System.out.println(torneoService.Grafica(torneo));
 						break;
 
 					case 3:
@@ -100,6 +102,9 @@ public static void main(String[] args) {
 				break;
 				
 			case 2:
+				
+				System.out.println(torneoService.Grafica(torneo));
+				
 				break;
 			case 3:
 				salir=true;

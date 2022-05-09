@@ -17,6 +17,7 @@ public interface ITorneoModel {
 	public void actualizarEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
 
 	public Jugador obtenerUnEquipo(Hashtable<String, Equipo> lista, String idEquipo);
+	
 
 
 

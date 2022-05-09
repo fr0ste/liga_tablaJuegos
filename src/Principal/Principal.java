@@ -20,9 +20,8 @@
 
 package Principal;
 
-import java.util.*; 
+import java.util.*;  
 import java.util.Iterator;
-import java.util.Map.Entry;
 import java.util.Set;
 
 //import java.util.Hashtable;
@@ -36,24 +35,24 @@ public class Principal {
 	        // Creating Hashtable object in where key is of
 	        // Integer type
 	        // and value is of String type
-	        Hashtable<Integer, String> ht = new Hashtable<>();
+	        Hashtable<String, String> ht = new Hashtable<>();
 	 
 	        // Putting key-value pairs to HashTable object
 	        // Custom input entries
-	        ht.put(1, "Java");
-	        ht.put(2, "Scala");
-	        ht.put(3, "Python");
-	        ht.put(4, "Ruby");
-	        ht.put(5, "R");
+	        ht.put("1", "Java");
+	        ht.put("2", "Scala");
+	        ht.put("3", "Python");
+	        ht.put("4", "Ruby");
+	        ht.put("5", "R");
 	 
 	     // Getting keySets of Hashtable and
 	        // storing it into Set
-	        Set<Integer> setOfKeys = ht.keySet();
+	        Set<String> setOfKeys = ht.keySet();
 	 
 	        // Creating an Iterator object to
 	        // iterate over the given Hashtable
-	        Iterator<Integer> itr = setOfKeys.iterator();
-	        int a = itr.next();
+	        Iterator<String> itr = setOfKeys.iterator();
+	        String a = itr.next();
 	        System.out.println(a);
 	        
 	        
