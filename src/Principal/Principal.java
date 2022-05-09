@@ -20,9 +20,8 @@
 
 package Principal;
 
-import java.util.*;  
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;   
+
 
 //import java.util.Hashtable;
 
@@ -45,16 +44,7 @@ public class Principal {
 	        ht.put("4", "Ruby");
 	        ht.put("5", "R");
 	 
-	     // Getting keySets of Hashtable and
-	        // storing it into Set
-	        Set<String> setOfKeys = ht.keySet();
-	 
-	        // Creating an Iterator object to
-	        // iterate over the given Hashtable
-	        Iterator<String> itr = setOfKeys.iterator();
-	        String a = itr.next();
-	        System.out.println(a);
-	        
+	   
 	        
 	        // Iterating through Hashtable using
 	        // forEach loop of java 8

@@ -25,7 +25,7 @@ public class JugadorServiceImpl  implements IJugadorService {
 	@Override
 	public void crearJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
 		
-		model.crearJugador(lista, jugador);
+		model.crearJugador(lista, this.crearJugador(null));
 		
 		
 	}
@@ -40,9 +40,9 @@ public class JugadorServiceImpl  implements IJugadorService {
 			int edad= scan.nextInt();
 			scan.nextLine();
 			System.out.println("ingrese la direccion");
-			String direccion = scan.next();
+			String direccion = scan.nextLine();
 			System.out.println("ingrese el telefono");
-			String telefono = scan.next();
+			String telefono = scan.nextLine();
 			scan.nextLine();
 		
 			

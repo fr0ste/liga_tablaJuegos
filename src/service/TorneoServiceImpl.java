@@ -1,10 +1,8 @@
 
 package service;
 
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.Set;
+
+import java.util.*;   
 
 import model.ITorneoModel;
 import model.TorneoModelImpl;
@@ -13,15 +11,19 @@ import pojo.Grafica;
 import pojo.Torneo;
 
 public class TorneoServiceImpl implements ITorneoService{
-
+	
+	private final int maxEquipos = 5;
+	private final int minEquipos=2;
+	private ITorneoModel torneo = new TorneoModelImpl();
+	private IEquipoService EquipoService = new EquipoServiceImpl();
+	
 	@Override
 	public Torneo crearTorneo() {
 		
-		final int maxEquipos = 5;
-		final int minEquipos=2;
+		
 		int i=0, opc=0;
-		ITorneoModel torneo = new TorneoModelImpl();
-		IEquipoService EquipoService = new EquipoServiceImpl();
+		
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("ingrese el nombre del torneo");
@@ -31,17 +33,17 @@ public class TorneoServiceImpl implements ITorneoService{
 		
 		Torneo nTorneo = torneo.crearTorneo(nombre, categoria);
 		
-		System.out.println("ï¿½NECESITA AL MENOS 2 EQUIPOS PARA GENERAR EL TORNEO!");
+		System.out.println("!NECESITA AL MENOS 2 EQUIPOS PARA GENERAR EL TORNEO!");
 		
 		System.out.println("\n +Ingrese los datos del los equipos");
 		do {
-			
-			System.out.println("\n\t\t----Equipo " +(i+1) +"----");
+			System.out.println("\n\n");
+			System.out.println("\n\t\t\t\t\t\t----Equipo " +(i+1) +"----");
 			nTorneo.setEquipos(EquipoService.crearEquipo(String.valueOf(i+1)));
 			i++;
 			
 			if(i>=minEquipos) {
-				System.out.println("ï¿½desea continuar agregando equipos? 1: si / 2: no");
+				System.out.println("¿desea continuar agregando equipos? 1: si / 2: no");
 				opc = scan.nextInt();  
 			}
 			
@@ -71,13 +73,7 @@ public class TorneoServiceImpl implements ITorneoService{
 	}
 
 	@Override
-	public void agregarEquipo(Equipo equipo, Torneo torneo) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public String Grafica(Torneo torneo) {
+	public void agregarEquipo(Torneo torneo) {
 		
 		
 		// Getting keySets of Hashtable and
@@ -88,16 +84,61 @@ public class TorneoServiceImpl implements ITorneoService{
         // iterate over the given Hashtable
         Iterator<String> itr = setOfKeys.iterator();
         String a = itr.next();
-        
-       System.out.println("a----" + a);
-        
-       int n = (int)(Integer.parseInt(a)-2);
        
-       System.out.println(n);
+        int i = (int)(Integer.parseInt(a));
+        
+        if(i<maxEquipos) {
+        	
+        	
+        	System.out.println("\n +Ingrese los datos del los equipos");
+ 
+    			
+    			System.out.println("\n\t\t----Equipo " +(i+1) +"----");
+    			torneo.setEquipos(EquipoService.crearEquipo(String.valueOf(i+1)));
+    			
+        
+        }else {
+        	
+        	
+        	System.out.println("***Se ha alcanzado el maximo de equipos***");
+        	
+        }
+        	
+        	
         
 		
-	return Grafica.getGrafica(n);
+	}
+
+	@Override
+	public void Grafica(Torneo torneo) {
 		
+		
+		// Getting keySets of Hashtable and
+        // storing it into Set
+        Set<String> setOfKeys = torneo.getEquipos().keySet();
+ 
+        // Creating an Iterator object to
+        // iterate over the given Hashtable
+        Iterator<String> itr = setOfKeys.iterator();
+        String a = itr.next();
+       
+        int n = (int)(Integer.parseInt(a)-2);
+        
+        System.out.println("\n\n");
+        System.out.println("*-*-*-*-*-ENCUENTROS-*-*-*-*");
+        System.out.println("\n\n");
+        
+        torneo.getEquipos().forEach((key, value)
+                -> System.out.println(
+                    "id : " + key
+                    + "\tNombre del equipo : " + value.getNombre()));        
+		
+        System.out.println(Grafica.getGrafica(n));
+		
+        
+        System.out.println("\n\n");
+        
+        
 	}
 	
 	

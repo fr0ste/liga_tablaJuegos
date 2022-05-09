@@ -17,9 +17,9 @@ public interface ITorneoService {
 
 	public void actualizarTorneo(Hashtable<String, Equipo> lista, Torneo torneo);
 	
-	public void agregarEquipo(Equipo equipo, Torneo torneo);
+	public void agregarEquipo(Torneo torneo);
 	
-	public String Grafica(Torneo torneo);
+	public void Grafica(Torneo torneo);
 	
 
 }

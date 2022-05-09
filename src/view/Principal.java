@@ -26,8 +26,6 @@ import pojo.Torneo;
 import service.ITorneoService;
 import service.TorneoServiceImpl;
 
-//import java.util.Hashtable;
-
 public class Principal {
 
 	public static void main(String[] args) {
@@ -39,14 +37,15 @@ public class Principal {
 		boolean salir2 = false;
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("**************GESTIÃ“N DE TORNEOS******************");
-		System.out.println("PARA CONTINUAR DEBE INGRESAR LOS DATOS DEL TORNEO\n\n");
+		System.out.println("\t\t\t\t\t**************GESTIÓN DE TORNEOS******************");
+		System.out.println("\nPARA CONTINUAR DEBE INGRESAR LOS DATOS DEL TORNEO\n\n");
 		Torneo torneo = torneoService.crearTorneo();
 		System.out.println("\n\t\t---TORNEO: " + torneo.getNombreTorneo() + "---");
 
 		do {
 
-			System.out.println("\t\tï¿½DESEA?...");
+			System.out.println("\t\t¿DESEA?...");
+			System.out.println("1.-gestionar torneo");
 			System.out.println("2.- generar grafico del torneo");
 			System.out.println("3.- cerrar programa");
 			opc = scan.nextInt();
@@ -57,29 +56,25 @@ public class Principal {
 
 				do {
 
-					System.out.println("\t\tÂ¿DESEA?...");
-					System.out.println("1.- actualizar un equipo");
-					System.out.println("2.- agregar un equipo");
-					System.out.println("3.- eliminar torneo");
-					System.out.println("4.- regresar");
+					System.out.println("\t\t¿DESEA?...");
+					System.out.println("1.- agregar un equipo");
+					System.out.println("2.- eliminar torneo");
+					System.out.println("3.- regresar");
 					opc2 = scan.nextInt();
 
 					switch (opc2) {
 
 					case 1:
 
-						torneoService.actualizarTorneo(torneo.getEquipos(), torneo);
+						torneoService.agregarEquipo(torneo);
 						break;
 
 					case 2:
 
-						System.out.println(torneoService.Grafica(torneo));
+						
 						break;
 
 					case 3:
-						break;
-
-					case 4:
 						salir2 = true;
 						break;
 
@@ -94,7 +89,7 @@ public class Principal {
 
 			case 2:
 
-				System.out.println(torneoService.Grafica(torneo));
+				torneoService.Grafica(torneo);
 
 				break;
 			case 3:

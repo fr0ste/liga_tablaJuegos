@@ -34,9 +34,11 @@ public class EquipoServiceImpl implements IEquipoService {
 		
 		int opc=0;
 		
-		System.out.println("ï¿½NECESITA AL MENOS 5 JUGADORES PARA CADA EQUIPO!");
+		System.out.println("!NECESITA AL MENOS 5 JUGADORES PARA CADA EQUIPO!");
 		
 		do {
+			System.out.println("\n\n");
+			System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 			System.out.println("\t\t\t----JUGADOR " + (njugador+1) + "----");
 			Jugador jugador = jugadorService.crearJugador(String.valueOf(njugador));
 			equipo.setJugador(jugador);
@@ -44,7 +46,7 @@ public class EquipoServiceImpl implements IEquipoService {
 			njugador++;
 			
 			if(njugador>=minJugadores) {
-				System.out.println("ï¿½desea seguir agregando jugadores? 1: si / 2: no");
+				System.out.println("¿desea seguir agregando jugadores? 1: si / 2: no");
 				opc = scan.nextInt();  
 			}
 			
