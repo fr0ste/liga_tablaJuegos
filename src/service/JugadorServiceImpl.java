@@ -32,18 +32,17 @@ public class JugadorServiceImpl  implements IJugadorService {
 	public Jugador crearJugador(String id) {
 		
 			Scanner scan = new Scanner(System.in);
-			System.out.println("ingrese el nombre del jugador: " + (Integer.parseInt(id)+1));
+			System.out.println("ingrese el nombre del jugador: " + (Integer.parseInt(id)));
 			String nombre = scan.nextLine();
 			System.out.println("ingrese la edad");
 			int edad= scan.nextInt();
 			scan.nextLine();
-			System.out.println("ingrese la direccion");
+			System.out.println("ingrese la dirección");
 			String direccion = scan.nextLine();
-			System.out.println("ingrese el telefono");
+			System.out.println("ingrese el teléfono");
 			String telefono = scan.nextLine();
 			scan.nextLine();
 		
-			
 			
 			return model.crearJugador(id, nombre, edad, direccion, telefono);
 		

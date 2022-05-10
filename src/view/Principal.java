@@ -1,9 +1,9 @@
-/* Autor:Figueroa Mart�nez Joel Francisco
+/* Autor:Figueroa Martínez Joel Francisco
  * 
- * Fecha de creaci�n: 02/05/2022
- * Fecha de modificaci�n: 09/05/2022
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
  * 
- * Descripci�n:
+ * Descripción:
  * 	El programa cuenta con estas opciones:
  *		1.- crear torneos donde es necesario un minimo de 
  *			dos equipos, en la cual cada equipo necisita un minimo
@@ -30,25 +30,51 @@ import service.TorneoServiceImpl;
 public class Principal {
 
 	public static void main(String[] args) {
-
+		
+		
+		
+		
+		System.out.println("\t\t\t\t───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───");
+		System.out.println("\t\t\t\t───█▒▒░░░░░░░░░▒▒█───");
+		System.out.println("\t\t\t\t────█░░█░░░░░█░░█────");
+		System.out.println("\t\t\t\t─▄▄──█░░░▀█▀░░░█──▄▄─");
+		System.out.println("\t\t\t\t█░░█─▀▄░░░░░░░▄▀─█░░█");
+		System.out.println("\t\t\t\t█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█");
+		System.out.println("\t\t\t\t█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█");
+		System.out.println("\t\t\t\t█░░║║║╠─║─║─║║║║║╠─░░█");
+		System.out.println("\t\t\t\t█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█");
+		System.out.println("\t\t\t\t█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
+		
+		
+		
 		ITorneoService torneoService = new TorneoServiceImpl();
 		int opc = 0;
 		int opc2 = 0;
 		boolean salir = false;
 		boolean salir2 = false;
+		
+		
 		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("\t\t*****************GESTIÓN DE TORNEOS******************");
+		
+		
 
-		System.out.println("\t\t\t\t\t**************GESTI�N DE TORNEOS******************");
+		
+		
 		System.out.println("\nPARA CONTINUAR DEBE INGRESAR LOS DATOS DEL TORNEO\n\n");
 		Torneo torneo = torneoService.crearTorneo();
 		System.out.println("\n\t\t---TORNEO: " + torneo.getNombreTorneo() + "---");
 
 		do {
-
-			System.out.println("\t\t�DESEA?...");
-			System.out.println("1.-gestionar torneo");
-			System.out.println("2.- generar grafico del torneo");
-			System.out.println("3.- cerrar programa");
+			System.out.println("\n");
+			System.out.println("\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+			System.out.println("\t\t\t█                ¿DESEA?                  █");
+			System.out.println("\t\t\t█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
+			System.out.println("\t\t\t█1.-gestionar torneo                      █");
+			System.out.println("\t\t\t█2.- generar grafico del torneo           █");
+			System.out.println("\t\t\t█3.- cerrar programa                      █");
+			System.out.println("\t\t\t█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
 			opc = scan.nextInt();
 
 			switch (opc) {
@@ -56,11 +82,14 @@ public class Principal {
 			case 1:
 
 				do {
-
-					System.out.println("\t\t�DESEA?...");
-					System.out.println("1.- agregar un equipo");
-					System.out.println("2.- listar todos los equipos del torneo");
-					System.out.println("3.- regresar");
+					System.out.println("\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
+					System.out.println("\t\t\t█                ¿DESEA?                  █");
+					System.out.println("\t\t\t█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
+					System.out.println("\t\t\t█1.- agregar un equipo                    █");
+					System.out.println("\t\t\t█2.- listar todos los equipos del torneo  █");
+					System.out.println("\t\t\t█3.- regresar                             █");
+					System.out.println("\t\t\t█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
+					
 					opc2 = scan.nextInt();
 
 					switch (opc2) {
@@ -107,7 +136,7 @@ public class Principal {
 		} while (!salir);
 
 		scan.close();
-		System.out.println("\t\t--FIN DEL PROGRAMA--");
+		System.out.println("\t\t\t\t--FIN DEL PROGRAMA--");
 
 	}
 

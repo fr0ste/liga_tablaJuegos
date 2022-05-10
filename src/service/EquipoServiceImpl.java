@@ -1,9 +1,9 @@
-/* Autor:Figueroa Mart�nez Joel Francisco
+/* Autor:Figueroa Martínez Joel Francisco
  * 
- * Fecha de creaci�n: 02/05/2022
- * Fecha de modificaci�n: 09/05/2022
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
  * 
- * Descripci�n: clase con todos los servicios disponibles para un equipo  
+ * Descripción: clase con todos los servicios disponibles para un equipo  
  * 
  * 
  */
@@ -49,15 +49,15 @@ public class EquipoServiceImpl implements IEquipoService {
 		
 		do {
 			System.out.println("\n\n");
-			System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
-			System.out.println("\t\t\t----JUGADOR " + (njugador+1) + "----");
+			System.out.println("▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
+			System.out.println("\t\t\t----JUGADOR " + (njugador) + "----");
 			Jugador jugador = jugadorService.crearJugador(String.valueOf(njugador));
 			equipo.setJugador(jugador);
 			
 			njugador++;
 			
-			if(njugador>=minJugadores && njugador<maxJugadores) {
-				System.out.println("�desea seguir agregando jugadores? 1: si / 2: no");
+			if(njugador>minJugadores && njugador<maxJugadores) {
+				System.out.println("¿desea seguir agregando jugadores? 1: si / 2: no");
 				opc = scan.nextInt();  
 			}
 			

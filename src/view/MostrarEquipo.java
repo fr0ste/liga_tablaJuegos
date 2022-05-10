@@ -1,9 +1,9 @@
-/* Autor:Figueroa Mart�nez Joel Francisco
+/* Autor:Figueroa Martínez Joel Francisco
  * 
- * Fecha de creaci�n: 02/05/2022
- * Fecha de modificaci�n: 09/05/2022
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
  * 
- * Descripci�n: clase con la vista disponible para los equipos  
+ * Descripción: clase con la vista disponible para los equipos  
  * 
  * 
  */
@@ -38,6 +38,7 @@ public class MostrarEquipo {
         	
         	String a = itr.next();
         	
+        	System.out.println("▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀");
         	System.out.println("\t\t EQUIPO: " + a);
         	
         	listarJugadores(torneo.getEquipos().get(a));

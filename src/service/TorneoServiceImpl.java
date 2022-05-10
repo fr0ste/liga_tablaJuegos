@@ -1,9 +1,9 @@
-/* Autor:Figueroa Mart�nez Joel Francisco
+/* Autor:Figueroa Martínez Joel Francisco
  * 
- * Fecha de creaci�n: 02/05/2022
- * Fecha de modificaci�n: 09/05/2022
+ * Fecha de creación: 02/05/2022
+ * Fecha de modificación: 09/05/2022
  * 
- * Descripci�n: clase con todos los servicios disponibles para un torneo  
+ * Descripción: clase con todos los servicios disponibles para un torneo  
  * 
  * 
  */
@@ -38,7 +38,7 @@ public class TorneoServiceImpl implements ITorneoService{
 		
 		System.out.println("ingrese el nombre del torneo");
 		String nombre = scan.nextLine();
-		System.out.println("ingrese la categoria del torneo");
+		System.out.println("ingrese la categoría del torneo");
 		String categoria = scan.nextLine();
 		
 		Torneo nTorneo = torneo.crearTorneo(nombre, categoria);
@@ -48,18 +48,19 @@ public class TorneoServiceImpl implements ITorneoService{
 		System.out.println("\n +Ingrese los datos del los equipos");
 		do {
 			System.out.println("\n\n");
-			System.out.println("\n\t\t\t\t\t\t----Equipo " +(i+1) +"----");
+			System.out.println("\t\t▀▀▀▀▀▀▀▀▀▀▀▀▀Equipo " +(i+1) +"▀▀▀▀▀▀▀▀▀▀▀▀▀");
 			nTorneo.setEquipos(EquipoService.crearEquipo(String.valueOf(i+1)));
 			i++;
 			
 			if(i>=minEquipos) {
-				System.out.println("�desea continuar agregando equipos? 1: si / 2: no");
+				System.out.println("¿desea continuar agregando equipos? 1: si / 2: no");
 				opc = scan.nextInt();  
 			}
 			
 			
 			
 		}while(i<maxEquipos && opc!=2);
+		
 		
 		return nTorneo;
 	}
@@ -143,6 +144,8 @@ public class TorneoServiceImpl implements ITorneoService{
                     "id : " + key
                     + "\tNombre del equipo : " + value.getNombre()));        
 		
+        
+        System.out.println("\n\n");
         System.out.println(Grafica.getGrafica(n));
 		
         
