@@ -1,47 +1,45 @@
-/* Autor:Figueroa Martínez Joel Francisco
+/* Autor:Figueroa Martï¿½nez Joel Francisco
  * 
- * Fecha de creación: 02/05/2022
- * Fecha de modificación: 09/05/2022
+ * Fecha de creaciï¿½n: 02/05/2022
+ * Fecha de modificaciï¿½n: 09/05/2022
  * 
- * Descripción: implementacion del modelo de torneo 
+ * Descripciï¿½n: implementacion del modelo de torneo 
  * 
  * 
  */
 
-
 package model;
 
-import java.util.Hashtable; 
+import java.util.Hashtable;
 
 import pojo.Equipo;
 import pojo.Jugador;
 import pojo.Torneo;
 
-
-public class TorneoModelImpl implements ITorneoModel{
+public class TorneoModelImpl implements ITorneoModel {
 
 	@Override
 	public Torneo crearTorneo(String nombreTorneo, String categoria) {
-		
-		return new Torneo(nombreTorneo,categoria);
+
+		return new Torneo(nombreTorneo, categoria);
 	}
 
 	@Override
 	public void guardarEquipo(Hashtable<String, Equipo> lista, Equipo equipo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void eliminarEquipo(Hashtable<String, Equipo> lista, String idEquipo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void actualizarEquipo(Hashtable<String, Equipo> lista, Equipo equipo) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -49,7 +47,5 @@ public class TorneoModelImpl implements ITorneoModel{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	
 
 }

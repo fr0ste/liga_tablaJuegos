@@ -30,10 +30,7 @@ import service.TorneoServiceImpl;
 public class Principal {
 
 	public static void main(String[] args) {
-		
-		
-		
-		
+
 		System.out.println("\t\t\t\t───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───");
 		System.out.println("\t\t\t\t───█▒▒░░░░░░░░░▒▒█───");
 		System.out.println("\t\t\t\t────█░░█░░░░░█░░█────");
@@ -44,24 +41,17 @@ public class Principal {
 		System.out.println("\t\t\t\t█░░║║║╠─║─║─║║║║║╠─░░█");
 		System.out.println("\t\t\t\t█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█");
 		System.out.println("\t\t\t\t█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
-		
-		
-		
+
 		ITorneoService torneoService = new TorneoServiceImpl();
 		int opc = 0;
 		int opc2 = 0;
 		boolean salir = false;
 		boolean salir2 = false;
-		
-		
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.println("\t\t*****************GESTIÓN DE TORNEOS******************");
-		
-		
 
-		
-		
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("\t\t*****************GESTIÓN DE TORNEOS******************");
+
 		System.out.println("\nPARA CONTINUAR DEBE INGRESAR LOS DATOS DEL TORNEO\n\n");
 		Torneo torneo = torneoService.crearTorneo();
 		System.out.println("\n\t\t---TORNEO: " + torneo.getNombreTorneo() + "---");
@@ -89,26 +79,26 @@ public class Principal {
 					System.out.println("\t\t\t█2.- listar todos los equipos del torneo  █");
 					System.out.println("\t\t\t█3.- regresar                             █");
 					System.out.println("\t\t\t█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█");
-					
+
 					opc2 = scan.nextInt();
 
 					switch (opc2) {
 
 					case 1:
-						
+
 						torneoService.agregarEquipo(torneo);
-						
+
 						break;
 
 					case 2:
-						
+
 						MostrarEquipo.listarEquipos(torneo);
-						
+
 						break;
 
 					case 3:
 						salir2 = true;
-						
+
 						break;
 
 					default:

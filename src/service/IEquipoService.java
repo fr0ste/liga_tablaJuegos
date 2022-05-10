@@ -1,13 +1,12 @@
-/* Autor:Figueroa Martínez Joel Francisco
+/* Autor:Figueroa Martï¿½nez Joel Francisco
  * 
- * Fecha de creación: 02/05/2022
- * Fecha de modificación: 09/05/2022
+ * Fecha de creaciï¿½n: 02/05/2022
+ * Fecha de modificaciï¿½n: 09/05/2022
  * 
- * Descripción: interface con todos los servicios disponibles para un equipo  
+ * Descripciï¿½n: interface con todos los servicios disponibles para un equipo  
  * 
  * 
  */
-
 
 package service;
 
@@ -18,9 +17,9 @@ import pojo.Equipo;
 import pojo.Jugador;
 
 public interface IEquipoService {
-	
+
 	public Equipo crearEquipo(String id);
-	
+
 	public void guardarEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
 
 	public void eliminarEquipo(Hashtable<String, Equipo> lista, String idEquipo);
@@ -30,6 +29,5 @@ public interface IEquipoService {
 	public Jugador obtenerUnEquipo(Hashtable<String, Equipo> lista, String idEquipo);
 
 	public List<Jugador> obtenerTodosEquipo(Hashtable<String, Equipo> lista, Equipo equipo);
-	
-	
+
 }

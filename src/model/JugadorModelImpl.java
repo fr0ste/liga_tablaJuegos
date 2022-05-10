@@ -1,21 +1,19 @@
-/* Autor:Figueroa Martínez Joel Francisco
+/* Autor:Figueroa Martï¿½nez Joel Francisco
  * 
- * Fecha de creación: 02/05/2022
- * Fecha de modificación: 09/05/2022
+ * Fecha de creaciï¿½n: 02/05/2022
+ * Fecha de modificaciï¿½n: 09/05/2022
  * 
- * Descripción: implementacion del modelo de jugador 
+ * Descripciï¿½n: implementacion del modelo de jugador 
  * 
  * 
  */
 
-
 package model;
-
 
 import java.util.Hashtable;
 import pojo.Jugador;
 
-public class JugadorModelImpl implements IJugadorModel{
+public class JugadorModelImpl implements IJugadorModel {
 
 	@Override
 	public void crearJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
@@ -25,13 +23,13 @@ public class JugadorModelImpl implements IJugadorModel{
 	@Override
 	public void eliminarJugador(Hashtable<String, Jugador> lista, String idJugador) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void actualizarJugador(Hashtable<String, Jugador> lista, Jugador jugador) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -48,11 +46,8 @@ public class JugadorModelImpl implements IJugadorModel{
 
 	@Override
 	public Jugador crearJugador(String id, String nombre, int edad, String direccion, String telefono) {
-		
-		
-		
-		return new Jugador(id,nombre,edad,direccion,telefono);
-	
-		
+
+		return new Jugador(id, nombre, edad, direccion, telefono);
+
 	}
 }
